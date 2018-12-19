@@ -1,5 +1,5 @@
-CREATE TABLE calendar (
-    st TIMESTAMP,
-    en TIMESTAMP,
-    userid NUMBER
-)
+CREATE TABLE meeting (
+  st TIMESTAMP,
+  en TIMESTAMP,
+  userid NUMBER
+);

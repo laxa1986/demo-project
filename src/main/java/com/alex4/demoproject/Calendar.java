@@ -6,8 +6,8 @@ import java.util.Date;
 public class Calendar {
     public static void main(String[] args) throws Exception {
 //        createTable();
-//        bookTheMeeting();
-        selectAll();
+        bookTheMeeting();
+//        selectAll();
     }
 
     private static void createTable() throws SQLException {
@@ -50,15 +50,16 @@ public class Calendar {
     private static final String BOOK_QUERY = "" +
             "INSERT INTO meeting (st, en, userid) VALUES (?, ?, ?)";
 
+    // XE
     private static Connection getConnection() throws SQLException {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        var sid = "ORCLCDB";
-        var user = "sys as SYSDBA";
-        var password = "Oradoc_db1";
+        var sid = "XE";
+        var user = "system";
+        var password = "oracle";
         return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"+sid, user, password);
     }
 
@@ -68,7 +69,7 @@ public class Calendar {
 
         try (var connection = getConnection()) {
             // this is to ensure that once non conflict identified, the conflict can't appear till the end of transaction
-//            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
             // this is to ensure both statements select and insert will be done as part of one transaction
             connection.setAutoCommit(false);
 
@@ -84,6 +85,7 @@ public class Calendar {
                 rs.next();
                 int conflictCount = rs.getInt(1);
                 if (conflictCount > 0) {
+                    System.out.println("meeting conflict");
                     return false;
                 }
             }

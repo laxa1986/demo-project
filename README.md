@@ -1,7 +1,6 @@
 # demo-project
 Sample project to test modern IT technologies
 
-
 1. Docker
 Sign up on docker web cite
 Install docker from official web cite
@@ -14,39 +13,21 @@ Get image from public docker hub (use the slim version)
 ```
 docker login
 
-# -d detached mode
-# -it basically enables terminal mode
-# -p expose port
+# -d detached mode, -it basically enables terminal mode, -p expose port
 # right after container name can specify path to data store: -v /data/OracleDBData:/ORCL
-docker run -d -it --name oracle -p 1521:1521 store/oracle/database-enterprise:12.2.0.1-slim
+docker run -d -it --name oracle -p 18080:8080 -p 1521:1521 -v /Users/alex4/docker/oracle:/u01/app/oracle sath89/oracle-xe-11g
 
 # too see logs
 docker logs oracle
 
 # to retire container
+docker container stop oracle
 docker container rm oracle
 ```
 
-user=sys, pw=Oradoc_db1
-DB_SID=ORCLCDB, DB_PDB=ORCLPDB1, DB_DOMAIN=localdomain
-
-links:
-https://hub.docker.com/_/oracle-database-enterprise-edition
-https://docs.docker.com/engine/reference/run/#foreground
-https://hub.docker.com/u/chekulaevalexey/content/sub-885eaa34-3b35-423c-8984-0fbe18e9271a
-
-3. JDBC
-Connected to DB via JDBC driver
-Created DB table and checked how sql statements work
-
-4. UI tool to explore DB State
+3. UI tool to explore DB State
 Oracle SQL Developer
+username: system, password: oracle, hostname: localhost, port: 1521, SID: xe
 
-5. GIT repo
-done with github:
+4. GIT repo
 https://github.com/laxa1986/demo-project
-
-6. Project structure (min)
-
-7. Oracle create schema and user 
-
