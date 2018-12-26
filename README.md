@@ -38,6 +38,8 @@ outside of docker intranet "demonw" nobody knows that container_id is a localhos
 ```
 #get container_id created for kafka server
 docker ps -aqf "name=kafka"
+#add this mapping into your /etc/hosts
+127.0.0.1 <container_id>
 ```
 
 

@@ -79,4 +79,6 @@ had to add next mapping into /etc/hosts
 
 11. Microservices (Broadridge)
 
-12. RabbitMQ
+12. RabbitMQ example
+
+13. Proper initialization: create DB structure, create Kafka topics
