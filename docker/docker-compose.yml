@@ -1,0 +1,37 @@
+version: '3'
+
+networks:
+  demonw:
+    driver: bridge
+
+services:
+  oracle:
+    image: sath89/oracle-xe-11g
+    ports:
+      - 18080:8080
+      - 1521:1521
+    volumes:
+      - /Users/alex4/docker/oracle:/u01/app/oracle
+    networks:
+      - demonw
+
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    ports:
+      - 2181:2181
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - demonw
+
+  kafka:
+    image: 'bitnami/kafka:latest'
+    ports:
+      - 9092:9092
+    environment:
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    volumes:
+      - /Users/alex4/docker/kafka:/bitnami/kafka
+    networks:
+      - demonw

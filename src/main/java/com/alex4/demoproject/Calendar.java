@@ -6,8 +6,8 @@ import java.util.Date;
 public class Calendar {
     public static void main(String[] args) throws Exception {
 //        createTable();
-        bookTheMeeting();
-//        selectAll();
+//        bookTheMeeting();
+        selectAll();
     }
 
     private static void createTable() throws SQLException {

@@ -64,5 +64,19 @@ Also consider this image:
 https://hub.docker.com/r/alexeiled/docker-oracle-xe-11g/dockerfile
 
 10. Kafka (Broadridge)
+10-1 Docker compose (best for quick start on single machine compared to swarm and kubernetes)
+10-2 ZooKeeper
+10-2-1 docker network - added explicit network in docker-compose.yml
+10-3 Kafka itself
+10-3-1 create topic
+```
+docker-compose exec kafka kafka-topics.sh --create --zookeeper zookeeper:2181 --topic test --partitions 1 --replication-factor 1
+docker-compose exec kafka kafka-topics.sh --list --zookeeper zookeeper:2181
+docker-compose exec kafka kafka-console-producer.sh --broker-list kafka:9092 --topic test message
+```
+had to add next mapping into /etc/hosts
+127.0.0.1 a28582be20c6
 
 11. Microservices (Broadridge)
+
+12. RabbitMQ
