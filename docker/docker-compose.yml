@@ -15,6 +15,18 @@ services:
     networks:
       - demonw
 
+  mongodb:
+    image: bitnami/mongodb:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - ~/docker/mongodb:/bitnami
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+#      - MONGODB_ROOT_PASSWORD=password123
+    networks:
+      - demonw
+
   zookeeper:
     image: 'bitnami/zookeeper:latest'
     ports:

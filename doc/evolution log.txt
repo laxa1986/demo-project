@@ -77,8 +77,12 @@ docker-compose exec kafka kafka-console-producer.sh --broker-list kafka:9092 --t
 had to add next mapping into /etc/hosts
 127.0.0.1 a28582be20c6
 
-11. Microservices (Broadridge)
+11. Microservices (Broadridge) - pause
+
+11.5 MongoDB
 
 12. RabbitMQ example
 
 13. Proper initialization: create DB structure, create Kafka topics
+
+Run my app in container as well to avoid having mappings in /etc/hosts
