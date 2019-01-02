@@ -65,7 +65,7 @@ public class CalendarApp {
         return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"+sid, user, password);
     }
 
-    public static boolean tryBook(Meeting meeting) throws SQLException {
+    static boolean tryBook(Meeting meeting) throws SQLException {
         var start = new Timestamp(meeting.getStart().getTime());
         var end = new Timestamp(meeting.getEnd().getTime());
 

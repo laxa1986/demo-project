@@ -42,7 +42,9 @@ docker ps -aqf "name=kafka"
 127.0.0.1 <container_id>
 ```
 
+6. IDE configuration
+Add 'Lombok' plugin in Intellij IDEA
 
-6. UI tool to explore DB State
+7. UI tool to explore DB State
 Oracle SQL Developer
 username: system, password: oracle, hostname: localhost, port: 1521, SID: xe
