@@ -3,9 +3,11 @@ package com.alex4.demoproject.model;
 import lombok.Getter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
 @ToString
+@Document(collection = "customer")
 public class Customer {
 
     @Id

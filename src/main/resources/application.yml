@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: DemoApp
+  data:
+    mongodb:
+      database: DemoDB

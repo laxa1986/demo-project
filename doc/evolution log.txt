@@ -80,9 +80,13 @@ had to add next mapping into /etc/hosts
 11. Microservices (Broadridge) - pause
 
 11.5 MongoDB
+v DB configuration
 - ACID transactions
 - any constraints on entities
 - reactive
+- two nodes replication and CAP theorem
+- custom query
+- using paging and sorting: repository.findAll(PageRequest.of(1, 20))
 
 11.7 added Lombok
 
