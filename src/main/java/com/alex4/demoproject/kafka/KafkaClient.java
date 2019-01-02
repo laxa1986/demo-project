@@ -1,4 +1,4 @@
-package com.alex4.demoproject;
+package com.alex4.demoproject.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRebalanceListener;

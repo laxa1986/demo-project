@@ -1,0 +1,21 @@
+VCS
+
+[in progress] Prototype (choose technologies)
+
+Build Server
+Build Repository
+QA Environment
+Stage/UAT Environment
+Prod Environment
+
+=== выбор проекта
+
+1. Круг знакомых
+2. Отзывы про рестораны, магазины, конкретные продукты
+3. Рейтинг адвокатов
+4. Словарь английского
+5. Сайт знакомств
+
+
+1. Круг знакомых
+- модель дуже простая - user, user2user
