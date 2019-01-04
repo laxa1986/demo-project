@@ -89,9 +89,13 @@ v DB configuration
 - using paging and sorting: repository.findAll(PageRequest.of(1, 20))
 
 11.7 added Lombok
+``
+11.8 Spring webflux
 
 12. RabbitMQ example
 
 13. Proper initialization: create DB structure, create Kafka topics
 
 Run my app in container as well to avoid having mappings in /etc/hosts
+
+- spring webflux security
