@@ -83,7 +83,7 @@ had to add next mapping into /etc/hosts
 v DB configuration
 - ACID transactions
 - any constraints on entities
-- reactive
+v reactive
 - two nodes replication and CAP theorem
 - custom query
 - using paging and sorting: repository.findAll(PageRequest.of(1, 20))

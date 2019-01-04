@@ -1,4 +1,4 @@
-package com.alex4.demoproject.app;
+package com.alex4.demoproject.mongo;
 
 import org.springframework.data.domain.AfterDomainEventPublication;
 import org.springframework.data.domain.DomainEvents;

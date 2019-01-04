@@ -1,4 +1,4 @@
-package com.alex4.demoproject.controller.dto;
+package com.alex4.demoproject.rest.dto;
 
 import lombok.Getter;
 import lombok.Setter;
