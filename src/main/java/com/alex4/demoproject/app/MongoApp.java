@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 import org.springframework.web.reactive.config.EnableWebFlux;
 
+// TODO: examine documentation https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#get-started:first-steps:nosql
 @EnableWebFlux
 @EnableReactiveMongoRepositories(basePackageClasses = UserRepository.class)
 @SpringBootApplication(scanBasePackageClasses = {UserServiceImpl.class, UserController.class})

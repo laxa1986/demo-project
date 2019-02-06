@@ -99,3 +99,5 @@ v reactive
 Run my app in container as well to avoid having mappings in /etc/hosts
 
 - spring webflux security
+
+JVM profilers: VisualVM (free), JProfiler (free), YourKit (used in BridgeWater), XRabel (expensive)

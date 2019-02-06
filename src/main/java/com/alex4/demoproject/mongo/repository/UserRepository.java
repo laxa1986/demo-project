@@ -12,4 +12,6 @@ public interface UserRepository extends ReactiveCrudRepository<UserDocument, Str
 
 //    @Query("{ 'firstname': ?0, 'lastname': ?1}")
 //    Mono<Customer> findByFirstnameAndLastname(String firstname, String lastname);
+
+    // TODO: https://github.com/spring-projects/spring-data-examples/tree/master/mongodb/reactive
 }

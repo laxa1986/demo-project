@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+// TODO: examine https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#webflux-controller
+// TODO: add test! https://spring.io/guides/gs/reactive-rest-service/
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -27,6 +29,7 @@ public class UserController {
         return Flux.empty();
     }
 
+    // TODO: read more about reactive streams https://projectreactor.io/docs/core/release/reference/index.html#which-operator
     @PostMapping("/create")
     public Mono<String> createUser(@RequestBody UserDto userDto) {
         var user = new User(userDto.getName(), userDto.getEmail());

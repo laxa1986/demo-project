@@ -25,11 +25,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    // TODO: try reactive transactions https://github.com/spring-projects/spring-data-examples/tree/master/mongodb/transactions
     public Mono<String> createUser(User user) {
         var userDoc = new UserDocument(user.getName(), user.getEmail());
         return userRepository.save(userDoc).map(UserDocument::getId);
     }
 
+    // TODO: try reactive templates https://spring.io/blog/2016/11/28/going-reactive-with-spring-data
     private void mongoTemplate() {
         MongoOperations mongoOps = new MongoTemplate(new MongoClient(), "DemoDB");
         mongoOps.insert(new UserDocument("Joe", "fake@email.com"));
